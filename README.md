@@ -4,4 +4,4 @@ intro to web development
 Just playing with HTML, CSS, and node.js
 ----
 
-Link to #1 Draw me: https://duuuuuuuuude0000drawme.on.drv.tw/drawme/draw%20me/home.html
+Exercise 1: https://duuuuuuuuude0000drawme.on.drv.tw/exercise-1/home.html?
