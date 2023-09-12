@@ -6,26 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="footer" href="footer.html">
 </head>
 
-<body> <link rel="stylesheet" href="dark.css">
+<body>
+    <link rel="stylesheet" href="dark.css">
     <nav>
         <form>
             <button type="submit" formaction="home.html">Home</button>
         </form>
     </nav>
 
+    <!-- request form. -->
     <section>
         <h2>Make Your Request</h2>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <form action="thankYou.html" method="post" enctype="text/plain">
             <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your Full Name"><br>
 
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="example@hotmail.com"><br>
 
             <label for="character">Character:</label><br>
-            <input type="text" id="character" name="character"><br>
+            <input type="text" id="character" name="character" placeholder="example: Luigi"><br>
 
             <label for="colored">Colored?</label><br>
             <input type="checkbox" id="colored" name="colored"><br>
@@ -34,10 +37,12 @@
             <input type="checkbox" id="sketch" name="sketch"><br>
 
             <label for="message">Details:</label><br>
-            <textarea name="message" id="message" rows="5" required></textarea><br><br>
+            <textarea name="message" id="message" rows="5" required
+                placeholder="Describe Your Drawing Request"></textarea><br><br>
 
-            <input type="submit" value="Submit">
+            <button type="submit">Submit</button>
         </form>
+    </section>
     </section>
 
     <section>
@@ -45,7 +50,22 @@
         <img src="assets\momo.png" alt="Image">
     </section>
 
+
+    <footer>
+        <p>Contact me at: <a href="saf_523_@hotmail.com">saf_523_@hotmail.com</a></p>
+        <p>&copy; 2023 Draw Me. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="myWork.html">Show me your work</a></li>
+                <li><a href="order.html">Make a request</a></li>
+                <li><a href="aboutMe.html">About me</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
 </body>
+
 
 
 
