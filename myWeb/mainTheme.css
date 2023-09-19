@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    color: #1B4332;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+    background-color: #F2F3F4;
+    border-bottom: 1px solid #D3D3D3;
+    /*end of header block*/
+
+}
+
+h2 {
+    font-size: x-large;
+
+    font-family: sans-serif;
+}
+
+.intro {
+    font-size: 0.8rem;
+    text-transform: none;
+}
+
+#options-highlighted {
+    background-color: rgb(224, 224, 224);
+}
+
+a {
+    color: #00917C;
+    text-decoration: none;
+    /*removed underlines of the navigations*/
+}
+
+nav {
+    background-color: #F2F3F4;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a:hover {
+    color: #006D5B;
+}
+
+nav li:nth-child(2) a {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    background-color: #F2F3F4;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+body a:not(nav a):hover {
+    cursor: pointer;
+}
+
+textarea {
+    height: 50px;
+    border-color: #05463c;
+}
+
+/**************** to be deleted :)))) just for the task******************/
+::selection {
+    background-color: #44a38d;
+    color: #000000;
+}
+
+/*table section*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #D3D3D3;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #D3D3D3;
+    color: #1B4332;
+}
+
+tr:hover {
+    background-color: #b9d9d3;
+}
+
+tr:hover td {
+    background-color: #b9d9d3;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(231, 231, 231);
+}
+
+/****************************/
+
+/*footer*/
+footer {
+    background-color: #F2F3F4;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #D3D3D3;
+    color: #1B4332;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #1B4332;
+}
+
+/****************************/
+
+input[type="text"][name="name"],
+textarea[name="message"] {
+    height: 50px;
+}

@@ -3,47 +3,28 @@
 
 <head>
   <title>Draw me</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    nav {
-      background-color: #f8f8f8;
-      border: 1px solid #e7e7e7;
-      text-align: center;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    nav ul li {
-      display: inline;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      color: #333;
-      text-decoration: none;
-    }
-
-    nav ul li a:hover {
-      color: #0056b3;
-    }
-  </style>
-
-  <title>Draw me</title>
   <meta name="description" content="This is a website about drawings and artwork.">
   <meta name="keywords" content="drawings, artwork, sketches">
   <meta name="author" content="Feras Alsinan">
-  <link rel="stylesheet" href="dark.css">
+  <link rel="stylesheet" href="mainTheme.css">
 </head>
 
 <body>
   <header>
     <h1>Draw me</h1>
-    <p>Welcome to my web page.</p>
-
+    
+      <p class="intro"><em>Thank you for visiting my webpage.</em> <br>
+        Here, you have the opportunity to submit requests for custom drawings tailored
+        to your preferred style. <br>
+        We offer two types of products for your convenience: <br>
+        <em id="options-highlighted">
+        -> Digitally-rendered PNG file <br>
+        -> Physical delivery of printed and framed canvases.
+      </em>
+      </p>
+    
   </header>
+
   <main>
     <nav>
       <ul>
@@ -52,8 +33,8 @@
         <li><a href="aboutMe.html">About me</a></li>
       </ul>
     </nav>
-    <img src="assets\tools.png" alt="tools" width="100">
 
+    <img src="assets\tools.png" alt="tools" width="100">
 
     <!-- This section is to create a table for sample pricing-->
     <section>
@@ -84,25 +65,6 @@
           <td>Clean</td>
         </tr>
       </table>
-      <!-- below is just css-->
-      <style>
-        table,
-        th,
-        td {
-          border: 1px solid black;
-          border-collapse: collapse;
-        }
-
-        th {
-          background-color: rgb(215, 213, 213);
-        }
-
-        td,
-        th {
-          padding: 2px;
-        }
-      </style>
-      <!---------------------------->
     </section>
     <br><br>
   </main>
@@ -111,18 +73,13 @@
     <p>Contact me at: <a href="saf_523_@hotmail.com">saf_523_@hotmail.com</a></p>
     <p>&copy; 2023 Draw Me. All rights reserved.</p>
     <nav>
-        <ul>
-          <li><a href="myWork.html">Show me your work</a></li>
-          <li><a href="order.html">Make a request</a></li>
-          <li><a href="aboutMe.html">About me</a></li>
-        </ul>
-      </nav>
-
-</footer>
-    
+      <ul>
+        <li><a href="myWork.html">Show me your work</a></li>
+        <li><a href="order.html">Make a request</a></li>
+        <li><a href="aboutMe.html">About me</a></li>
+      </ul>
+    </nav>
+  </footer>
 </body>
-
-
-
 
 </html>
