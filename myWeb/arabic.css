@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+body{
+    font-family: 'El Messiri', sans-serif;
+
+}
+
+
+
+
+.nav-items {
+    display: flex;
+    padding: 16px 80px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    height: 36;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+
+}
+
+.DrawMe {
+    color: var(--gray-900, #111827);
+    font-family: "Inter";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    /* 120% */
+    letter-spacing: -0.6px;
+    justify-content: flex-start;
+}
+.nav-items li{
+    list-style: none;
+    margin-right: 100px;
+}
+.nav-items li:nth-last-of-type(1){
+    margin: 0;
+}
+
+
+.main-container{
+    width: 100%;
+    height: 552px;
+    display: flex;
+padding: 80px 32px;
+align-items: flex-start;
+gap: 48px;
+flex: 1 0 0;
+flex-wrap: wrap;
+}
+.main-content{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    
+}
+
+
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    color: #1B4332;
+    text-align: center;
+    padding: 20px;
+    background-color: #F2F3F4;
+    border-bottom: 1px solid #D3D3D3;
+    /*end of header block*/
+
+}
+
+
+
+.welcome {
+    font-family: "Inter";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+    /* 120% */
+    letter-spacing: -1.2px;
+    margin-left: 80px;
+}
+
+.intro {
+    color: var(--gray-600, #4B5563);
+
+    /* Body2/Normal - All */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+
+h2 {
+    font-size: x-large;
+
+    font-family: sans-serif;
+}
+
+
+
+#options-highlighted {
+    background-color: rgb(224, 224, 224);
+}
+
+a {
+    color: #00917C;
+    text-decoration: none;
+    /*removed underlines of the navigations*/
+}
+
+
+
+nav ul li a:hover {
+    color: #006D5B;
+}
+
+nav li:nth-child(2) a {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    background-color: #F2F3F4;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+body a:not(nav a):hover {
+    cursor: pointer;
+}
+
+textarea {
+    height: 50px;
+    border-color: #05463c;
+}
+
+/**************** to be deleted :)))) just for the task******************/
+::selection {
+    background-color: #44a38d;
+    color: #000000;
+}
+
+/*table section*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #D3D3D3;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #D3D3D3;
+    color: #1B4332;
+}
+
+tr:hover {
+    background-color: #b9d9d3;
+}
+
+tr:hover td {
+    background-color: #b9d9d3;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(231, 231, 231);
+}
+
+/****************************/
+
+/*footer*/
+footer {
+    background-color: #F2F3F4;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #D3D3D3;
+    color: #1B4332;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #1B4332;
+}
+
+/****************************/
+
+input[type="text"][name="name"],
+textarea[name="message"] {
+    height: 50px;
+}
