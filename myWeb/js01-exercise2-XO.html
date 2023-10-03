@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .cell {
+            font-family: sans-serif;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: beige;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell:hover {
+            background-color: blanchedalmond;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .cell-X {
+            background-color: rgb(224, 226, 95);
+        }
+
+        .cell-O {
+            background-color: rgb(113, 64, 141);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="turn">
+        Now it's <span>X</span>'s turn
+    </h1>
+    <!-- Board -->
+    <div class="board">
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <button id="reset">Reset</button>
+        <!-- lets script it 😁 -->
+        <script>
+            let turn = "X";
+            let gameEnded = false;
+
+            let board = document.getElementsByClassName("board")[0]
+            board.addEventListener("click", cellClicked);
+
+            function cellClicked(event) {
+                let clickedCell = event.target;
+
+                if (gameEnded) {
+                    return;
+                } else {
+                    if (clickedCell.innerText == "" && clickedCell.className.includes("cell")) {
+                        clickedCell.innerText = turn;
+                        clickedCell.classList.add('cell-' + turn);
+
+                        if (checkWin()) {
+                            gameEnded = true;
+                            document.querySelector("#turn").innerText = `${turn} wins!`;
+                            return;
+                        }
+
+                        let cells = document.querySelectorAll('.cell');
+                        if ([...cells].every(cell => cell.innerText !== "")) {
+                            gameEnded = true;
+                            document.querySelector("#turn").innerText = "It's a Draw!";
+                            return;
+                        }
+
+                        turn = turn === "X" ? "O" : "X";
+                        let turnLetter = document.querySelector("#turn")
+                        turnLetter.innerText = "Now it's "+turn+"'s turn";
+                    }
+                }
+            }
+
+            function checkWin() {
+                let rows = document.querySelectorAll('.row');
+                let cells = [];
+                rows.forEach(row => {
+                    let cellRow = Array.from(row.querySelectorAll('.cell')).map(cell => cell.innerText);
+                    cells = [...cells, ...cellRow];
+                });
+
+                let winConditions = [
+                    [0, 1, 2],
+                    [3, 4, 5],
+                    [6, 7, 8],
+                    [0, 3, 6],
+                    [1, 4, 7],
+                    [2, 5, 8],
+                    [0, 4, 8],
+                    [2, 4, 6]
+                ];
+
+                return winConditions.some(condition => condition.every(idx => cells[idx] === turn));
+            }
+
+            let resetButton = document.getElementById('reset');
+            resetButton.addEventListener('click', resetGame);
+
+            function resetGame() {
+                turn = "X";
+                gameEnded = false;
+
+                let cells = document.querySelectorAll('.cell');
+                cells.forEach(cell => {
+                    cell.innerText = "";
+                    cell.classList.remove('cell-X', 'cell-O');
+                });
+
+                document.querySelector("#turn").innerText = "Now it's " + turn + "'s turn"
+            }
+        </script>
+    </div>
+</body>
+
+</html>
