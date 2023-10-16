@@ -312,8 +312,10 @@ textarea[name="message"] {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 300px; /* Adjust as needed */
-    margin-bottom: 20px; /* Space between cards */
+    width: 300px;
+    /* Adjust as needed */
+    margin-bottom: 20px;
+    /* Space between cards */
 }
 
 .artwork-image {
@@ -346,6 +348,10 @@ textarea[name="message"] {
     margin: 0;
 }
 
+/* style.css */
+.artwork-image {
+    width: 30px;
+}
 
 
 /* Mobile exercise...*/
@@ -405,6 +411,9 @@ textarea[name="message"] {
     }
 
 
-
+    /* style.css */
+    .artwork-image {
+        width: 60px;
+    }
 
 }
