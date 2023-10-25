@@ -46,6 +46,13 @@
         </form>
     </section>
 
+    <section id="orderInfo">
+        <h2>Order Information</h2>
+        <p id="orderList"></p>
+        <p id="completedOrderPrices"></p>
+        <p id="totalCompletedOrderPrice"></p>
+    </section>
+
     <section>
         <p style="color: red;">Do not panic. If you did not like the product, your money will be refunded !!</p>
         <img src="assets\momo.png" alt="Image">
@@ -133,6 +140,47 @@
             // Then submit the form which will navigate to the thankYou.html page
             event.target.submit();
         });
+
+
+
+        //js04 exercise 3
+        // Assume we have an array of orders
+        let orders = [
+            { id: 1, type: "Digital", price: 20, completed: false },
+            { id: 2, type: "Physical", price: 50, completed: false },
+            { id: 3, type: "Digital", price: 20, completed: true },
+            { id: 4, type: "Physical", price: 50, completed: true },
+            { id: 5, type: "Digital", price: 20, completed: false },
+        ];
+
+        // Use the map function to create an array of prices for completed orders
+        let completedOrderPrices = orders
+            .filter(order => order.completed)
+            .map(order => order.price);
+
+        console.log(completedOrderPrices); // Output: [20, 50]
+
+        // Use the reduce function to calculate the total price of completed orders
+        let totalCompletedOrderPrice = completedOrderPrices.reduce(
+            (total, price) => total + price,
+            0
+        );
+
+        console.log("js04 exercise 3: ")
+        console.log(totalCompletedOrderPrice); // Output: 70
+
+
+        // Add orders to the orderList
+        let orderListText = "Completed Orders: " + "\n" + orders.map(order => `ID: ${order.id}, Type: ${order.type}, Price: ${order.price}, Completed: ${order.completed}`).join(", ");
+        document.getElementById("orderList").innerText = orderListText;
+
+        // Add completed order prices to the completedOrderPrices
+        let completedOrderPricesText = "Completed Order Prices: " + completedOrderPrices.join(", ");
+        document.getElementById("completedOrderPrices").innerText = completedOrderPricesText;
+
+        // Add total completed order price to the totalCompletedOrderPrice
+        let totalCompletedOrderPriceText = "Total Completed Order Price: " + totalCompletedOrderPrice;
+        document.getElementById("totalCompletedOrderPrice").innerText = totalCompletedOrderPriceText;
     </script>
 
 </body>
