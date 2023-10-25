@@ -7,19 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="desktop.css">
+    <script src="classes.js"></script>
 </head>
 
-<body>
-    <nav>
-        <form>
-            <button type="submit" formaction="home.html">Home</button>
-        </form>
-    </nav>
 
+
+
+<body>
+    <a href="home.html"> home</a>
     <!-- request form. -->
     <section>
         <h2>Make Your Request</h2>
-        <form action="thankYou.html" method="post" enctype="multipart/form-data">
+        <form action="thankYou.html" method="get" enctype="multipart/form-data">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" autocomplete="name" placeholder="Your Full Name"><br>
 
@@ -36,7 +35,7 @@
             <input type="checkbox" id="sketch" name="sketch"><br>
 
             <label for="message">Details:</label><br>
-            <textarea name="message" id="message" rows="5" required
+            <textarea name="message" id="message" rows="5"
                 placeholder="Describe Your Drawing Request"></textarea><br><br>
 
             <label for="signature">Signature:</label><br>
@@ -101,6 +100,37 @@
             let signature_data = document.getElementById('signature_data');
             signature_data.value = canvas.toDataURL();
 
+            event.target.submit();
+        });
+
+
+
+
+        // Array to hold the requests
+        let requests = [];
+        // creating object
+        document.querySelector('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            let signature_data = document.getElementById('signature_data');
+            signature_data.value = canvas.toDataURL();
+
+            // Get form values
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let character = document.getElementById('character').value;
+            let isColored = document.getElementById('colored').checked;
+            let isSketch = document.getElementById('sketch').checked;
+            let details = document.getElementById('message').value;
+
+            // Create new Request object
+            let request = new Request(name, email, character, isColored, isSketch, details);
+            // Add the new request to the array
+            requests.push(request);
+            // Display an alert with the request name
+            alert("Request created for: " + request.getName() + "  Character name:" + request.getCharacter());
+
+            // Then submit the form which will navigate to the thankYou.html page
             event.target.submit();
         });
     </script>
