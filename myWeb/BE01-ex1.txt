@@ -1,0 +1,10 @@
+https://www.kooora.com/
+
+ip address: 172.64.151.193:443.
+I found 2 https:// requests.
+The different types returned from the requests:
+xhr,x-icon,text,svg+xml,script,stylesheet,png,jpeg,gif,fetch,document
+
+
+largest file:
+Name: js?id=G0Q2V3M512SC&I=dataLayer&cx=c, type: script, size: 84.9kB,Time: 244ms
